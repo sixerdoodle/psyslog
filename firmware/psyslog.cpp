@@ -30,7 +30,7 @@ void syslog_printf(int level, const char *tag, const char *msg, ...) {
     unsigned int len = SYSLOG_MESSAGE_LEN;
     char buf[len];
 
-    int written = start_syslog_msg(buf, len - written, level, tag);
+    int written = start_syslog_msg(buf, len, level, tag);
 
     va_list args;
     va_start(args, msg);
